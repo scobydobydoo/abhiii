@@ -11,7 +11,6 @@
     <style>
         :root {
             --bg: #000000;
-            --card: #0a0a0a;
             --text: #ffffff;
             --muted: #cfcfcf;
             --accent: #ffffff;
@@ -62,22 +61,46 @@
             padding-left: 12px;
         }
 
+        /* ================= NAVBAR ================= */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: #000000;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
             padding: 15px 10%;
             display: flex;
             justify-content: space-between;
+            align-items: center;
             z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav strong {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
         }
 
         nav a {
             margin-left: 20px;
             font-size: 0.9rem;
+            position: relative;
+            padding-bottom: 4px;
         }
 
+        nav a.active::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: white;
+        }
+
+        /* ================= HERO ================= */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -90,7 +113,6 @@
         }
 
         .hero-content h3 {
-            color: var(--accent);
             margin: 15px 0;
         }
 
@@ -122,6 +144,7 @@
             opacity: 0.85;
         }
 
+        /* ================= GRID & CARDS ================= */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -129,15 +152,18 @@
         }
 
         .card {
-            background: var(--card);
+            background: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             padding: 25px;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.25);
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.18);
         }
 
         .card h4 {
@@ -169,10 +195,11 @@
 
 <body>
 
-    <!-- Navbar -->
+    <!-- NAVBAR -->
     <nav>
         <strong>Portfolio</strong>
         <div>
+            <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
@@ -182,15 +209,14 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" id="home">
         <div class="hero-content">
             <h1>Abhishek Rawat</h1>
             <h3>B.Tech CSE (AI & ML) Student</h3>
             <p>
-                Computer Science student specializing in Artificial Intelligence and Machine Learning,
+                Computer Science student specializing in Artificial Intelligence and Machine Learning.
                 Tech enthusiast and ML learner captivated by the intricacies of AI.
-                I like engaging with complex problems and shaping cleaner solutions.
             </p>
             <div class="btn-group">
                 <a href="#projects" class="btn-primary">View Projects</a>
@@ -199,17 +225,17 @@
         </div>
     </section>
 
-    <!-- About -->
+    <!-- ABOUT -->
     <section id="about">
         <h2>About Me</h2>
         <p>
             I am a motivated 2nd-year B.Tech Computer Science student specializing in AI & ML
             at Graphic Era Hill University. I actively practice Data Structures and Algorithms
-            and enjoy working on projects that combine logic, performance, and clean design.
+            and enjoy working on performance-focused projects.
         </p>
     </section>
 
-    <!-- Skills -->
+    <!-- SKILLS -->
     <section id="skills">
         <h2>Skills</h2>
         <div class="grid">
@@ -225,51 +251,37 @@
         </div>
     </section>
 
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="grid">
-
             <div class="card">
                 <h4>Travel Route Optimization System</h4>
-                <p>
-                    C-based desktop application that finds optimal paths using graph algorithms
-                    like Dijkstra’s algorithm.
-                </p>
-                <p><b>Tech:</b> C, Graphs, Dijkstra</p>
-                <a href="https://github.com/Priyanxu05" target="_blank">View Code</a>
+                <p>C-based application using Dijkstra’s Algorithm.</p>
+                <p><b>Tech:</b> C, Graphs</p>
             </div>
 
             <div class="card">
                 <h4>Weather Prediction System</h4>
-                <p>
-                    Machine learning-based weather forecasting system trained on historical
-                    climate data.
-                </p>
-                <p><b>Tech:</b> Python, Pandas, Scikit-learn</p>
-                <a href="https://github.com/Priyanxu05" target="_blank">View Code</a>
+                <p>ML-based weather forecasting system.</p>
+                <p><b>Tech:</b> Python, Scikit-learn</p>
             </div>
 
             <div class="card">
                 <h4>Alumni Management System</h4>
-                <p>
-                    System designed to manage records, schedules, and data efficiently using
-                    structured programming concepts.
-                </p>
+                <p>Efficient record management using structured programming.</p>
                 <p><b>Tech:</b> C</p>
-                <a href="https://github.com/Priyanxu05" target="_blank">View Code</a>
             </div>
-
         </div>
     </section>
 
-    <!-- Education -->
+    <!-- EDUCATION -->
     <section id="education">
         <h2>Education</h2>
         <div class="grid">
             <div class="card">
-                <h4>B.Tech – Computer Science (AI & ML)</h4>
-                <p>Graphic Era Hill University (2024 – 2028)</p>
+                <h4>B.Tech – CSE (AI & ML)</h4>
+                <p>Graphic Era Hill University (2024–2028)</p>
             </div>
             <div class="card">
                 <h4>Class 12</h4>
@@ -282,30 +294,24 @@
         </div>
     </section>
 
-    <!-- Assignments -->
+    <!-- ASSIGNMENTS -->
     <section id="assignments">
         <h2>Assignments</h2>
         <div class="grid">
             <div class="card">
-                <h4>Profiling Sheet – Graphic Era Hill University</h4>
-                <p>
-                    Official profiling sheet containing career objectives, achievements,
-                    strengths, weaknesses, and academic reflections.
-                </p>
-                <a href="Profiling_Sheet_Priyanshu_Rawat.pdf" download>
-                    ⬇️ Download Assignment (PDF)
-                </a>
+                <h4>Profiling Sheet</h4>
+                <p>Official academic profiling document.</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact -->
+    <!-- CONTACT -->
     <section id="contact">
         <h2>Contact</h2>
         <ul>
             <li>Email: <a href="mailto:priyanshurwt044@gmail.com">priyanshurwt044@gmail.com</a></li>
-            <li>GitHub: <a href="https://github.com/Priyanxu05" target="_blank">github.com/Priyanxu05</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/priyanshu-rawat-3791b034" target="_blank">LinkedIn Profile</a></li>
+            <li>GitHub: github.com/Priyanxu05</li>
+            <li>LinkedIn: priyanshu-rawat</li>
         </ul>
     </section>
 
@@ -313,6 +319,30 @@
         © 2026 Abhishek Rawat | Portfolio
     </footer>
 
-</body>
+    <!-- SCROLL SPY SCRIPT -->
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav a");
 
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 160;
+                const sectionHeight = section.offsetHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
 </html>
