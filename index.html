@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abhishek Rawat | Portfolio</title>
 
+    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         :root {
@@ -41,6 +43,7 @@
         section {
             padding: 80px 10%;
             animation: fadeUp 1s ease;
+            scroll-margin-top: 120px;
         }
 
         @keyframes fadeUp {
@@ -173,6 +176,16 @@
             font-size: 0.95rem;
         }
 
+        /* SKILLS */
+        #skills .card {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        #skills .card:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
         /* PROJECT BUTTON */
         .project-btn {
             display: inline-block;
@@ -189,19 +202,42 @@
             color: #000000;
         }
 
-        ul {
+        /* CONTACT */
+        .contact-list {
             list-style: none;
+            max-width: 600px;
         }
 
-        ul li {
-            margin-bottom: 10px;
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            font-size: 1rem;
             color: var(--muted);
+            transition: transform 0.2s ease;
+        }
+
+        .contact-list li:hover {
+            transform: translateX(4px);
+        }
+
+        .contact-list i {
+            width: 20px;
+            font-size: 1.1rem;
+        }
+
+        .contact-list a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight-name {
+            font-weight: 600;
         }
 
         footer {
             text-align: center;
             padding: 30px;
-            background: #000000;
             color: var(--muted);
         }
     </style>
@@ -228,11 +264,13 @@
         <h3>B.Tech CSE (AI & ML) Student</h3>
         <p>
             Computer Science student specializing in Artificial Intelligence and Machine Learning.
-            Tech enthusiast and ML learner captivated by the intricacies of AI.
+            Tech enthusiast passionate about building intelligent, real-world systems.
         </p>
         <div class="btn-group">
             <a href="#projects" class="btn-primary">View Projects</a>
-            <a href="Abhishek_Rawat_Resume.pdf" class="btn-outline" target="_blank">Download Resume</a>
+            <a href="Abhishek_Rawat_Resume.pdf" class="btn-outline" target="_blank" rel="noopener noreferrer">
+                Download Resume
+            </a>
         </div>
     </div>
 </section>
@@ -240,8 +278,9 @@
 <section id="about">
     <h2>About Me</h2>
     <p>
-        I am a motivated 2nd-year B.Tech Computer Science student specializing in AI & ML
-        at Graphic Era Hill University.
+        I’m passionate about solving complex problems and strengthening algorithmic thinking while building intelligent,
+        data-driven systems. I enjoy converting ideas into impactful real-world projects and writing clean, efficient,
+        and optimized code.
     </p>
 </section>
 
@@ -255,8 +294,10 @@
         <div class="card">Data Structures & Algorithms</div>
         <div class="card">OOP</div>
         <div class="card">Machine Learning</div>
+        <div class="card">Scikit-learn</div>
         <div class="card">Git & GitHub</div>
-        <div class="card">HTML%, JAvacript, CSS3</div>
+        <div class="card">HTML5, JavaScript, CSS3</div>
+        <div class="card">MySQL</div>
     </div>
 </section>
 
@@ -266,27 +307,27 @@
 
         <div class="card">
             <h4>CampusWell Agent</h4>
-            <p>A multi-agent welfare assistant for college students built using Google ADK.</p>
-            <p><b>Tech:</b> Python, Multi-Agent Systems, ADK</p>
-            <a href="https://github.com/scobydobydoo/campuswell-agent" target="_blank" class="project-btn">
+            <p>Multi-agent welfare assistant for college students.</p>
+            <p><b>Tech:</b> Python, Multi-Agent Systems</p>
+            <a href="https://github.com/scobydobydoo/campuswell-agent" target="_blank" rel="noopener noreferrer" class="project-btn">
                 View on GitHub
             </a>
         </div>
 
         <div class="card">
-            <h4>Travel Route Optimization System</h4>
-            <p>Optimal path finder using graph algorithms and real-world map data.</p>
-            <p><b>Tech:</b> C, Graphs, Dijkstra, OSM API</p>
-            <a href="https://github.com/Priyanxu05" target="_blank" class="project-btn">
+            <h4>Travel Route Optimization</h4>
+            <p>Shortest-path finder using graph algorithms.</p>
+            <p><b>Tech:</b> C, Dijkstra</p>
+            <a href="https://github.com/scobydobydoo" target="_blank" rel="noopener noreferrer" class="project-btn">
                 View on GitHub
             </a>
         </div>
 
         <div class="card">
             <h4>Weather Prediction System</h4>
-            <p>Machine learning based weather forecasting system.</p>
+            <p>ML-based weather forecasting model.</p>
             <p><b>Tech:</b> Python, Scikit-learn</p>
-            <a href="https://github.com/Priyanxu05" target="_blank" class="project-btn">
+            <a href="https://github.com/scobydobydoo" target="_blank" rel="noopener noreferrer" class="project-btn">
                 View on GitHub
             </a>
         </div>
@@ -316,45 +357,40 @@
     <h2>Assignments</h2>
     <div class="grid">
         <a href="https://github.com/scobydobydoo/abhiii/blob/main/ProfilingSheet.pdf"
-           target="_blank"
-           style="text-decoration: none;">
-
+           target="_blank" rel="noopener noreferrer">
             <div class="card">
                 <h4>Profiling Sheet</h4>
                 <p>Official academic profiling document.</p>
             </div>
-
         </a>
     </div>
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
-    <ul>
-        <li>
-            Email:
-            <a href="mailto:rawatabhi0214@gmail.com">
-                rawatabhi0214@gmail.com
-            </a>
+    <ul class="contact-list">
+        <li><i class="fas fa-envelope"></i>Email:
+            <a href="mailto:rawatabhi0214@gmail.com">rawatabhi0214@gmail.com</a>
         </li>
-        <li>
-            GitHub:
-            <a href="https://github.com/scobydobydoo" target="_blank">
-                github.com/scobydobydoo
-            </a>
+        <li><i class="fab fa-github"></i>GitHub:
+            <a href="https://github.com/scobydobydoo" target="_blank" rel="noopener noreferrer">scobydobydoo</a>
         </li>
-        <li>
-            LinkedIn:
-            <a href="https://www.linkedin.com/in/abhi0214/" target="_blank">
+        <li><i class="fab fa-linkedin"></i>LinkedIn:
+            <a href="https://www.linkedin.com/in/abhi0214/" target="_blank" rel="noopener noreferrer" class="highlight-name">
                 Abhishek Rawat
             </a>
+        </li>
+        <li><i class="fas fa-code"></i>LeetCode:
+            <a href="https://leetcode.com/u/whereRyou/" target="_blank" rel="noopener noreferrer">scobydobydoo</a>
+        </li>
+        <li><i class="fab fa-kaggle"></i>Kaggle:
+            <a href="https://www.kaggle.com/scobydobydoo" target="_blank" rel="noopener noreferrer">Abhishek</a>
         </li>
     </ul>
 </section>
 
-
 <footer>
-    © 2026 Abhishek Rawat | Portfolio
+    © <span id="year"></span> Abhishek Rawat | Portfolio
 </footer>
 
 <script>
@@ -363,12 +399,10 @@
 
     window.addEventListener("scroll", () => {
         let current = "";
-
         sections.forEach(section => {
-            const sectionTop = section.offsetTop - 160;
-            const sectionHeight = section.offsetHeight;
-            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                current = section.getAttribute("id");
+            const top = section.offsetTop - 160;
+            if (scrollY >= top && scrollY < top + section.offsetHeight) {
+                current = section.id;
             }
         });
 
@@ -379,6 +413,8 @@
             }
         });
     });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
