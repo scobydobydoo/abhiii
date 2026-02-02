@@ -61,14 +61,13 @@
             padding-left: 12px;
         }
 
-        /* ================= NAVBAR ================= */
+        /* NAVBAR */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             padding: 15px 10%;
             display: flex;
             justify-content: space-between;
@@ -100,7 +99,7 @@
             background: white;
         }
 
-        /* ================= HERO ================= */
+        /* HERO */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -144,7 +143,7 @@
             opacity: 0.85;
         }
 
-        /* ================= GRID & CARDS ================= */
+        /* GRID & CARDS */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -154,7 +153,6 @@
         .card {
             background: rgba(30, 30, 30, 0.85);
             backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
             padding: 25px;
             border-radius: 14px;
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -173,6 +171,22 @@
         .card p {
             color: var(--muted);
             font-size: 0.95rem;
+        }
+
+        /* PROJECT BUTTON */
+        .project-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 16px;
+            border: 1px solid #ffffff;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .project-btn:hover {
+            background: #ffffff;
+            color: #000000;
         }
 
         ul {
@@ -195,154 +209,177 @@
 
 <body>
 
-    <!-- NAVBAR -->
-    <nav>
-        <strong>Portfolio</strong>
-        <div>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#education">Education</a>
-            <a href="#assignments">Assignments</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
+<nav>
+    <strong>Portfolio</strong>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
-    <!-- HERO -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Abhishek Rawat</h1>
-            <h3>B.Tech CSE (AI & ML) Student</h3>
-            <p>
-                Computer Science student specializing in Artificial Intelligence and Machine Learning.
-                Tech enthusiast and ML learner captivated by the intricacies of AI.
-            </p>
-            <div class="btn-group">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="Priyanshu_Rawat_Resume.pdf" class="btn-outline" target="_blank">Download Resume</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about">
-        <h2>About Me</h2>
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Abhishek Rawat</h1>
+        <h3>B.Tech CSE (AI & ML) Student</h3>
         <p>
-            I am a motivated 2nd-year B.Tech Computer Science student specializing in AI & ML
-            at Graphic Era Hill University. I actively practice Data Structures and Algorithms
-            and enjoy working on performance-focused projects.
+            Computer Science student specializing in Artificial Intelligence and Machine Learning.
+            Tech enthusiast and ML learner captivated by the intricacies of AI.
         </p>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="grid">
-            <div class="card">C</div>
-            <div class="card">C++</div>
-            <div class="card">Java</div>
-            <div class="card">Python</div>
-            <div class="card">Data Structures & Algorithms</div>
-            <div class="card">OOP</div>
-            <div class="card">Machine Learning</div>
-            <div class="card">Git & GitHub</div>
-            <div class="card">Streamlit</div>
+        <div class="btn-group">
+            <a href="#projects" class="btn-primary">View Projects</a>
+            <a href="Abhishek_Rawat_Resume.pdf" class="btn-outline" target="_blank">Download Resume</a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- PROJECTS -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="grid">
-            <div class="card">
-                <h4>Travel Route Optimization System</h4>
-                <p>C-based application using Dijkstra’s Algorithm.</p>
-                <p><b>Tech:</b> C, Graphs</p>
-            </div>
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a motivated 2nd-year B.Tech Computer Science student specializing in AI & ML
+        at Graphic Era Hill University.
+    </p>
+</section>
 
-            <div class="card">
-                <h4>Weather Prediction System</h4>
-                <p>ML-based weather forecasting system.</p>
-                <p><b>Tech:</b> Python, Scikit-learn</p>
-            </div>
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+        <div class="card">C</div>
+        <div class="card">C++</div>
+        <div class="card">Java</div>
+        <div class="card">Python</div>
+        <div class="card">Data Structures & Algorithms</div>
+        <div class="card">OOP</div>
+        <div class="card">Machine Learning</div>
+        <div class="card">Git & GitHub</div>
+        <div class="card">HTML%, JAvacript, CSS3</div>
+    </div>
+</section>
 
-            <div class="card">
-                <h4>Alumni Management System</h4>
-                <p>Efficient record management using structured programming.</p>
-                <p><b>Tech:</b> C</p>
-            </div>
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+
+        <div class="card">
+            <h4>CampusWell Agent</h4>
+            <p>A multi-agent welfare assistant for college students built using Google ADK.</p>
+            <p><b>Tech:</b> Python, Multi-Agent Systems, ADK</p>
+            <a href="https://github.com/scobydobydoo/campuswell-agent" target="_blank" class="project-btn">
+                View on GitHub
+            </a>
         </div>
-    </section>
 
-    <!-- EDUCATION -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="grid">
-            <div class="card">
-                <h4>B.Tech – CSE (AI & ML)</h4>
-                <p>Graphic Era Hill University (2024–2028)</p>
-            </div>
-            <div class="card">
-                <h4>Class 12</h4>
-                <p>The Indian Academy – 85%</p>
-            </div>
-            <div class="card">
-                <h4>Class 10</h4>
-                <p>The Indian Academy – 88%</p>
-            </div>
+        <div class="card">
+            <h4>Travel Route Optimization System</h4>
+            <p>Optimal path finder using graph algorithms and real-world map data.</p>
+            <p><b>Tech:</b> C, Graphs, Dijkstra, OSM API</p>
+            <a href="https://github.com/Priyanxu05" target="_blank" class="project-btn">
+                View on GitHub
+            </a>
         </div>
-    </section>
 
-    <!-- ASSIGNMENTS -->
-    <section id="assignments">
-        <h2>Assignments</h2>
-        <div class="grid">
+        <div class="card">
+            <h4>Weather Prediction System</h4>
+            <p>Machine learning based weather forecasting system.</p>
+            <p><b>Tech:</b> Python, Scikit-learn</p>
+            <a href="https://github.com/Priyanxu05" target="_blank" class="project-btn">
+                View on GitHub
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+        <div class="card">
+            <h4>B.Tech – CSE (AI & ML)</h4>
+            <p>Graphic Era Hill University (2024–2028)</p>
+        </div>
+        <div class="card">
+            <h4>Class 12</h4>
+            <p>The Indian Academy – 85%</p>
+        </div>
+        <div class="card">
+            <h4>Class 10</h4>
+            <p>The Indian Academy – 88%</p>
+        </div>
+    </div>
+</section>
+
+<section id="assignments">
+    <h2>Assignments</h2>
+    <div class="grid">
+        <a href="https://github.com/scobydobydoo/abhiii/blob/main/ProfilingSheet.pdf"
+           target="_blank"
+           style="text-decoration: none;">
+
             <div class="card">
                 <h4>Profiling Sheet</h4>
                 <p>Official academic profiling document.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li>Email: <a href="mailto:priyanshurwt044@gmail.com">priyanshurwt044@gmail.com</a></li>
-            <li>GitHub: github.com/Priyanxu05</li>
-            <li>LinkedIn: priyanshu-rawat</li>
-        </ul>
-    </section>
+        </a>
+    </div>
+</section>
 
-    <footer>
-        © 2026 Abhishek Rawat | Portfolio
-    </footer>
+<section id="contact">
+    <h2>Contact</h2>
+    <ul>
+        <li>
+            Email:
+            <a href="mailto:rawatabhi0214@gmail.com">
+                rawatabhi0214@gmail.com
+            </a>
+        </li>
+        <li>
+            GitHub:
+            <a href="https://github.com/scobydobydoo" target="_blank">
+                github.com/scobydobydoo
+            </a>
+        </li>
+        <li>
+            LinkedIn:
+            <a href="https://www.linkedin.com/in/abhi0214/" target="_blank">
+                Abhishek Rawat
+            </a>
+        </li>
+    </ul>
+</section>
 
-    <!-- SCROLL SPY SCRIPT -->
-    <script>
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll("nav a");
 
-        window.addEventListener("scroll", () => {
-            let current = "";
+<footer>
+    © 2026 Abhishek Rawat | Portfolio
+</footer>
 
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 160;
-                const sectionHeight = section.offsetHeight;
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute("id");
-                }
-            });
+<script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("nav a");
 
-            navLinks.forEach(link => {
-                link.classList.remove("active");
-                if (link.getAttribute("href") === `#${current}`) {
-                    link.classList.add("active");
-                }
-            });
+    window.addEventListener("scroll", () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 160;
+            const sectionHeight = section.offsetHeight;
+            if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
         });
-    </script>
+
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === `#${current}`) {
+                link.classList.add("active");
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
